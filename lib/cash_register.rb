@@ -12,7 +12,7 @@ class CashRegister
   
   
   def add_item(title, price, quantity = 1)
-    self.total += (price * quantity)
+    @total += (price * quantity)
     # h = {:title => title, :price => price, :quantity => quantity}
   end
   
