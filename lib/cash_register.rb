@@ -30,6 +30,13 @@ class CashRegister
   end
   
   def items
-    self.items_array
+    arr = []
+    self.items_array.map do |item|
+      key = item.keys[0]
+      item[key][:quantity].times do
+        arr << key
+      end
+    end
+    arr
   end
 end
