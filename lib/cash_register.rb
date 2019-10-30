@@ -14,9 +14,7 @@ class CashRegister
   end
   
   def add_item(name, price, quantity = 1)
-    quantity.times do
-      self.items_array << name
-    end
+    self.items_array << { name => { :price => price, :quantity => quantity}}
     
     self.total += (price * quantity)
   end
