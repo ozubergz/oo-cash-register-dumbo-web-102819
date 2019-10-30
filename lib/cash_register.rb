@@ -20,4 +20,6 @@ class CashRegister
     "After the discount, the total comes to $#{self.total.round}."
   end
   
+  
+  
 end
