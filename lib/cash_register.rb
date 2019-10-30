@@ -10,18 +10,18 @@ class CashRegister
     @total = 0
   end
   
-  def total=(total_price)
-    @total += total_price
-  end
+  # def total=(total_price)
+  #   @total += total_price
+  # end
   
   def add_item(title, price, quantity = 1)
     @total += (price * quantity)
     # h = {:title => title, :price => price, :quantity => quantity}
   end
   
-  def apply_discount
-    discount = self.discount * 0.01
-    self.total -= (self.total * discount)
-  end
+  # def apply_discount
+  #   discount = self.discount * 0.01
+  #   self.total -= (self.total * discount)
+  # end
   
 end
