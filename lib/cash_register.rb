@@ -2,7 +2,7 @@ require "pry"
 
 class CashRegister
   
-  attr_accessor :discount, :total
+  attr_accessor :discount, :total, :items_array
   attr_reader :title, :price, :quantity
   
   ITEMS = []
@@ -10,10 +10,11 @@ class CashRegister
   def initialize(discount = 0)
     @discount = discount
     @total = 0
+    @items_array = []
   end
   
   def add_item(title, price, quantity = 1)
-    ITEMS << title
+    self.items_array << title
     self.total += (price * quantity)
   end
   
@@ -28,6 +29,6 @@ class CashRegister
   end
   
   def items
-    ITEMS
+    self.items_array
   end
 end
