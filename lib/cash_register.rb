@@ -41,6 +41,6 @@ class CashRegister
   end
   
   def void_last_transaction
-    self.items_array
+    self.items_array[items_array.length - 1]
   end
 end
