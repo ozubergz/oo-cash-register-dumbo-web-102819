@@ -39,4 +39,8 @@ class CashRegister
     end
     arr
   end
+  
+  def void_last_transaction
+    self.items_array
+  end
 end
