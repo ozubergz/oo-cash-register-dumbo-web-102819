@@ -41,6 +41,9 @@ class CashRegister
   end
   
   def void_last_transaction
-    self.items_array[items_array.length - 1]
+    last_item = self.items_array[items_array.length - 1]
+    key = last_item.keys[0]
+    self.total -= (last_item[key][:price] * last_item[key][:quantity])
+    self.total.round
   end
 end
